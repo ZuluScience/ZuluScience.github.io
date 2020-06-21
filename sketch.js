@@ -50,11 +50,11 @@ function setup() {
         widthControl[i] = new Button(pos, 10, 10, i + 1, 7);
     }
     for (let i = 0; i < 10; i ++) {
-        let pos = createVector(200 + 20 * i, 100);
+        let pos = createVector(175 + 20 * i, 100);
         heightControl[i] = new Button(pos, 10, 10, i + 1, 7);
     }
     for (let i = 0; i < 10; i ++) {
-        let pos = createVector(200 + 20 * i, 200);
+        let pos = createVector(175 + 20 * i, 200);
         speedControl[i] = new Button(pos, 10, 10, i + 1, 7);
     }
     state = 'setBox';
@@ -77,8 +77,8 @@ function draw() {
     fill(50);
     text('Control the Roughness', 490, 75);
     text('Control the Width', 490, 175);
-    text('Control the Height', 290, 75);
-    text('Control the Starting Speed', 290, 175);
+    text('Control the Height', 265, 75);
+    text('Control the Starting Speed', 265, 175);
     for (let button of frictionControl) {
         button.show();
         if (button.amPressed()) {
