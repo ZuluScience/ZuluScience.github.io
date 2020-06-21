@@ -17,7 +17,7 @@ class Box {
         strokeWeight(1);
         let yToDraw = this.pos.y - this.size.y;
         let xToDraw = this.pos.x;
-        if (this.pos.x > width - this.size.x / 2) {
+        if (this.pos.x > width - this.size.x) {
             xToDraw = width - this.size.x;
         }    
         rect(xToDraw, yToDraw, this.size.x, this.size.y);
