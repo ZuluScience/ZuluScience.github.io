@@ -11,9 +11,12 @@ class Box {
         fill(100);
         stroke(0);
         strokeWeight(1);
-        this.pos.y -= this.size.y;
-        rect(this.pos.x, this.pos.y, this.size.x, this.size.y);
-        this.pos.y += this.size.y;
+        let yToDraw = this.pos.y - this.size.y;
+        let xToDraw = this.pos.x;
+        if (this.pos.x > width) {
+            xToDraw = width - this.size.x;
+        }    
+        rect(xToDraw, yToDraw, this.size.x, this.size.y);
     };
     move() {
         this.speed -= this.friction;
