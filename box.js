@@ -23,6 +23,7 @@ class Box {
         fill(0, 0, 255);
         rect(xToDraw, yToDraw, this.size.x, this.size.y);
         textSize(20);
+        fill(100);
         text(this.distanceTravelled, constrain(xToDraw + this.size.x / 2, 0, width - 20), yToDraw - 10);
     };
     move() {
