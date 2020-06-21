@@ -92,6 +92,7 @@ function draw() {
         
     if (state === 'setBox') {
         box.show();
+        box.distanceTravelled = 0;
         for (let button of frictionControl) {
         button.show();
         if (button.amPressed()) {
