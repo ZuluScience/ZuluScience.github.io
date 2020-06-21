@@ -84,9 +84,9 @@ function draw() {
     text('Control the Width', 490, 175);
     text(box.size.x, 490, 225);
     text('Control the Height', 265, 75);
-    text(box.size.y, 490, 125);
+    text(box.size.y, 265, 125);
     text('Control the Starting Speed', 265, 175);
-    text(box.speed, 490, 125);
+    text(box.speed, 265, 225);
     
     
         
