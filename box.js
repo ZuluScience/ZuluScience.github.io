@@ -9,7 +9,7 @@ class Box {
         this.weight = this.size.x * this.size.y;
     };
     distanceTravelled_() {
-        this.distanceTravelled = floor(this.pos.x - 100);
+        this.distanceTravelled = floor((this.pos.x - 100) / 10);
     }    
     show() {
         fill(100);
@@ -21,6 +21,7 @@ class Box {
             xToDraw = width - this.size.x;
         }    
         rect(xToDraw, yToDraw, this.size.x, this.size.y);
+        textSize(20);
         text(this.distanceTravelled, xToDraw + this.size.x / 2, yToDraw - 10);
     };
     move() {
