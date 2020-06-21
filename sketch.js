@@ -13,7 +13,7 @@ let pic;
 function preload() {
     pic = loadImage('https://thumbs.dreamstime.com/b/simple-background-10181840.jpg');
 }    
-function drawArrow(base, vec, myColor, size) {
+function drawArrow(base, vec, myColor) {
     push();
     stroke(myColor);
     strokeWeight(3);
@@ -21,11 +21,14 @@ function drawArrow(base, vec, myColor, size) {
     translate(base.x, base.y);
     line(0, 0, vec.x, vec.y);
     rotate(vec.heading());
-    let arrowSize = size;
+    let arrowSize = 7;
     translate(vec.mag() - arrowSize, 0);
     triangle(0, arrowSize / 2, 0, -arrowSize / 2, arrowSize, 0);
     pop();
 }
+function drawForce(forceMag, forceDir, colour) {
+    drawArrow(forceMag, forceDir, colour);
+}    
 function drawGround() {
     fill(0);
     stroke(0);
@@ -62,6 +65,7 @@ function setup() {
 function draw() {
     image(pic, 0, 0, 600, 600);   
     drawGround();
+    
     restartButton.show();
     runButton.show();
     if (runButton.amPressed()) {
