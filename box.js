@@ -8,7 +8,7 @@ class Box {
         this.distanceTravelled = 0;
         this.weight = this.size.x * this.size.y;
     };
-    distanceTravelled() {
+    distanceTravelled_() {
         this.distanceTravelled = floor(this.pos.x - 100);
     }    
     show() {
@@ -33,7 +33,7 @@ class Box {
         this.friction += frictionalForce;
     };
     run() {
-        this.distanceTravelled();
+        this.distanceTravelled_();
         this.show();
         this.calculateFriction();
         this.move();
