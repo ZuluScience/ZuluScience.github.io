@@ -80,9 +80,13 @@ function draw() {
     textSize(18);
     fill(50);
     text('Control the Roughness', 490, 75);
+    text(roughness, 490, 125);
     text('Control the Width', 490, 175);
+    text(box.size.x, 490, 225);
     text('Control the Height', 265, 75);
+    text(box.size.y, 490, 125);
     text('Control the Starting Speed', 265, 175);
+    text(box.speed, 490, 125);
     for (let button of frictionControl) {
         button.show();
         if (button.amPressed()) {
