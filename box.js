@@ -33,6 +33,7 @@ class Box {
         this.friction += frictionalForce;
     };
     run() {
+        this.distanceTravelled();
         this.show();
         this.calculateFriction();
         this.move();
