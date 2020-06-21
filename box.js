@@ -5,8 +5,12 @@ class Box {
         this.friction = 0;
         this.speed = 0;
         this.cOfFriction = roughness;
+        this.distanceTravelled = 0;
         this.weight = this.size.x * this.size.y;
     };
+    distanceTravelled() {
+        this.distanceTravelled = floor(this.pos.x - 100);
+    }    
     show() {
         fill(100);
         stroke(0);
@@ -17,6 +21,7 @@ class Box {
             xToDraw = width - this.size.x;
         }    
         rect(xToDraw, yToDraw, this.size.x, this.size.y);
+        text(this.distanceTravelled, xToDraw + this.size.x / 2, yToDraw - 10);
     };
     move() {
         this.speed -= this.friction;
