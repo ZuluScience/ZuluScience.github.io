@@ -87,7 +87,12 @@ function draw() {
     text(box.size.y, 490, 125);
     text('Control the Starting Speed', 265, 175);
     text(box.speed, 490, 125);
-    for (let button of frictionControl) {
+    
+    
+        
+    if (state === 'setBox') {
+        box.show();
+        for (let button of frictionControl) {
         button.show();
         if (button.amPressed()) {
             roughness = button.buttonText / 100;
@@ -113,9 +118,7 @@ function draw() {
         if (button.amPressed()) {
             box.speed = button.buttonText / 2;
         }
-    }
-    if (state === 'setBox') {
-        box.show();
+     }
     } else if (state === 'go') {
         box.run();
     }
