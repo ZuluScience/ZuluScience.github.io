@@ -28,11 +28,14 @@ class Box {
     };
     move() {
         this.speed -= this.friction;
+        if (this.speed < 0) {
+            this.speed = 0;
+        }    
         this.pos.x += this.speed;
         this.friction = 0;
     };
     calculateFriction() {
-        let frictionalForce = this.weight * this.cOfFriction * this.speed * this.speed / 10000;
+        let frictionalForce = this.weight * this.cOfFriction * this.speed.normalize() / 100000;
         this.friction += frictionalForce;
     };
     run() {
