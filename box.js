@@ -35,7 +35,7 @@ class Box {
         this.friction = 0;
     };
     calculateFriction() {
-        let frictionalForce = this.weight * this.cOfFriction * this.speed.normalize() / 100000;
+        let frictionalForce = this.weight * this.cOfFriction / 100000;
         this.friction += frictionalForce;
     };
     run() {
