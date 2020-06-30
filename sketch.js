@@ -87,7 +87,7 @@ function draw() {
     text(box.size.y, 265, 125);
     text('Control the Starting Speed', 265, 175);
     text(box.speed, 265, 225);
-    
+    text(box.frictionalForce, 100, 300);
     
         
     if (state === 'setBox') {
